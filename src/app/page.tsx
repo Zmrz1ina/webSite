@@ -81,6 +81,46 @@ const gallery = [
     src: "/images/partner-shin/service-5.jpg",
     alt: "Зона обслуживания колес",
   },
+  {
+    src: "/images/partner-shin/yandex/yandex-01.jpg",
+    alt: "Фасад Партнер шин с Яндекс.Карт",
+  },
+  {
+    src: "/images/partner-shin/yandex/yandex-02.jpg",
+    alt: "Въезд и вывеска Партнер шин",
+  },
+  {
+    src: "/images/partner-shin/yandex/yandex-03.jpg",
+    alt: "Рабочая зона шиномонтажа Партнер шин",
+  },
+  {
+    src: "/images/partner-shin/yandex/yandex-04.jpg",
+    alt: "Оборудование шиномонтажа Партнер шин",
+  },
+  {
+    src: "/images/partner-shin/yandex/yandex-05.jpg",
+    alt: "Шины и диски в Партнер шин",
+  },
+  {
+    src: "/images/partner-shin/yandex/yandex-06.jpg",
+    alt: "Сервисная зона Партнер шин",
+  },
+  {
+    src: "/images/partner-shin/yandex/yandex-07.jpg",
+    alt: "Помещение Партнер шин",
+  },
+  {
+    src: "/images/partner-shin/yandex/yandex-08.jpg",
+    alt: "Фото сервиса Партнер шин",
+  },
+  {
+    src: "/images/partner-shin/yandex/yandex-09.jpg",
+    alt: "Здание и территория Партнер шин",
+  },
+  {
+    src: "/images/partner-shin/yandex/yandex-10.jpg",
+    alt: "Дополнительное фото Партнер шин",
+  },
 ];
 
 export default function Home() {
@@ -265,16 +305,20 @@ export default function Home() {
                   Фотографии
                 </p>
                 <h2 className="mt-2 text-3xl font-semibold">Партнер шин на месте</h2>
+                <p className="mt-2 max-w-2xl text-sm leading-6 text-[#6d7889]">
+                  Галерея объединяет фото из карточки AVSERVICE.BY и доступные
+                  фотографии из галереи Яндекс.Карт.
+                </p>
               </div>
               <Sparkles className="hidden size-8 text-[#ff3b24] sm:block" />
             </div>
-            <div className="grid auto-rows-[190px] gap-3 sm:grid-cols-4">
+            <div className="grid auto-rows-[170px] gap-3 sm:grid-cols-4 lg:grid-cols-5">
               {gallery.map((photo, index) => (
                 <div
                   key={photo.src}
                   className={
                     index < 2
-                      ? "relative overflow-hidden rounded-lg sm:col-span-2"
+                      ? "relative overflow-hidden rounded-lg sm:col-span-2 lg:col-span-2"
                       : "relative overflow-hidden rounded-lg"
                   }
                 >
