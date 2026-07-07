@@ -48,12 +48,18 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/estree": "^1.0.9",
+    "@types/json-schema": "^7.0.15",
+    "@types/json5": "^2.2.0",
     "@types/node": "^24",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/statuses": "^2.0.6",
+    "@types/validate-npm-package-name": "^4.0.2",
     "eslint": "^9",
     "eslint-config-next": "16.2.1",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "validate-npm-package-name": "^8.0.0"
   }
 }
