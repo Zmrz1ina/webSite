@@ -1,16 +1,12 @@
-import Image from "next/image";
+import Link from "next/link";
 import {
   BadgeCheck,
   CarFront,
-  Clock3,
   ExternalLink,
   MapPin,
-  MessageCircle,
   Phone,
   ShieldCheck,
   ShoppingBag,
-  Sparkles,
-  Star,
   Wrench,
 } from "lucide-react";
 import { ScrollWheelVideo } from "@/components/scroll-wheel-video";
@@ -42,7 +38,7 @@ const services = [
   {
     icon: Wrench,
     title: "Шиномонтаж",
-    text: "Шиномонтаж легковых и микроавтобусных шин до 24 дюймов.",
+    text: "Легковые и микроавтобусные шины до 24 дюймов.",
   },
   {
     icon: ShoppingBag,
@@ -61,359 +57,170 @@ const services = [
   },
 ];
 
-const gallery = [
-  {
-    src: "/images/partner-shin/service-1.jpg",
-    alt: "Фасад Партнер шин вечером",
-  },
-  {
-    src: "/images/partner-shin/service-2.jpg",
-    alt: "Здание Партнер шин",
-  },
-  {
-    src: "/images/partner-shin/service-3.jpg",
-    alt: "Рабочая зона шиномонтажа",
-  },
-  {
-    src: "/images/partner-shin/service-4.jpg",
-    alt: "Оборудование шиномонтажа",
-  },
-  {
-    src: "/images/partner-shin/service-5.jpg",
-    alt: "Зона обслуживания колес",
-  },
-  {
-    src: "/images/partner-shin/yandex/yandex-01.jpg",
-    alt: "Фасад Партнер шин с Яндекс.Карт",
-  },
-  {
-    src: "/images/partner-shin/yandex/yandex-02.jpg",
-    alt: "Въезд и вывеска Партнер шин",
-  },
-  {
-    src: "/images/partner-shin/yandex/yandex-03.jpg",
-    alt: "Рабочая зона шиномонтажа Партнер шин",
-  },
-  {
-    src: "/images/partner-shin/yandex/yandex-04.jpg",
-    alt: "Оборудование шиномонтажа Партнер шин",
-  },
-  {
-    src: "/images/partner-shin/yandex/yandex-05.jpg",
-    alt: "Шины и диски в Партнер шин",
-  },
-  {
-    src: "/images/partner-shin/yandex/yandex-06.jpg",
-    alt: "Сервисная зона Партнер шин",
-  },
-  {
-    src: "/images/partner-shin/yandex/yandex-07.jpg",
-    alt: "Помещение Партнер шин",
-  },
-  {
-    src: "/images/partner-shin/yandex/yandex-08.jpg",
-    alt: "Фото сервиса Партнер шин",
-  },
-  {
-    src: "/images/partner-shin/yandex/yandex-09.jpg",
-    alt: "Здание и территория Партнер шин",
-  },
-  {
-    src: "/images/partner-shin/yandex/yandex-10.jpg",
-    alt: "Дополнительное фото Партнер шин",
-  },
-];
-
 export default function Home() {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-black text-[#172033]">
+    <main className="relative min-h-screen overflow-hidden bg-black text-white">
       <ScrollWheelVideo />
-      <section className="relative z-10 overflow-hidden text-white">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/72 via-black/42 to-black/74" />
+      <div className="pointer-events-none fixed inset-0 z-[1] bg-[radial-gradient(circle_at_50%_18%,rgba(255,255,255,0.16),transparent_34%),linear-gradient(180deg,rgba(0,0,0,0.52),rgba(0,0,0,0.18)_44%,rgba(0,0,0,0.66))]" />
 
-
-        <div className="relative mx-auto flex min-h-[680px] max-w-7xl flex-col justify-between px-5 py-5 sm:px-8 lg:px-10">
-          <header className="flex items-center justify-between gap-4">
-            <div className="flex items-center gap-3">
-              <div className="flex size-12 items-center justify-center overflow-hidden rounded-full bg-white shadow-xl">
-                <Image
-                  src="/images/partner-shin/logo.png"
-                  alt="Логотип Партнер шин"
-                  width={48}
-                  height={48}
-                  className="size-full object-contain"
-                />
-              </div>
-              <div>
-                <div className="text-sm font-semibold uppercase tracking-[0.24em] text-white/70">
-                  Гомель
-                </div>
-                <div className="font-semibold">улица Барыкина 155</div>
-              </div>
+      <section className="relative z-10 mx-auto flex min-h-svh max-w-7xl flex-col px-4 py-4 sm:px-8 lg:px-10">
+        <header className="flex items-center justify-between gap-3 rounded-md border border-white/14 bg-white/[0.08] px-3 py-3 shadow-2xl shadow-black/20 backdrop-blur-2xl sm:px-4">
+          <div className="min-w-0">
+            <div className="text-lg font-semibold leading-none sm:text-xl">Партнер шин</div>
+            <div className="mt-1 flex items-center gap-1.5 text-xs font-medium text-white/70 sm:text-sm">
+              <MapPin className="size-3.5 shrink-0 text-[#ff5945]" />
+              <span className="truncate">Гомель, улица Барыкина 155</span>
             </div>
-            <a
-              href="https://vk.com/partner_shin"
-              target="_blank"
-              rel="noreferrer"
-              className="hidden h-10 items-center gap-2 rounded-md border border-white/25 px-4 text-sm font-semibold text-white transition hover:bg-white hover:text-[#172033] sm:inline-flex"
-            >
-              Вконтакте
-              <ExternalLink className="size-4" />
-            </a>
-          </header>
+          </div>
+          <Link
+            href="/dop-info"
+            className="inline-flex h-10 shrink-0 items-center gap-2 rounded-md border border-white/15 bg-white/[0.09] px-3 text-sm font-semibold text-white backdrop-blur-xl transition hover:bg-white/18"
+          >
+            Доп инфо
+            <ExternalLink className="size-4" />
+          </Link>
+        </header>
 
-          <div className="max-w-4xl pb-10 pt-24">
-            <div className="mb-5 inline-flex items-center gap-2 rounded-md bg-white/12 px-3 py-2 text-sm font-semibold text-white ring-1 ring-white/20 backdrop-blur">
-              <BadgeCheck className="size-4 text-[#65d37e]" />
-              Профиль подтвержден на AVSERVICE.BY
-            </div>
-            <h1 className="max-w-3xl text-5xl font-semibold leading-[0.95] tracking-normal sm:text-6xl lg:text-7xl">
+        <div className="grid flex-1 items-center gap-5 py-6 lg:grid-cols-[0.95fr_1.05fr] lg:py-8">
+          <div className="max-w-2xl">
+            <h1 className="text-5xl font-semibold leading-[0.92] tracking-normal sm:text-6xl lg:text-7xl">
               Партнер шин
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-white/82 sm:text-xl">
-              Автомагазин, автоэлектрика, кузовной ремонт и шиномонтаж в Гомеле.
-              Работают ежедневно с 8:00 до 20:00.
+            <p className="mt-5 max-w-xl text-base leading-7 text-white/78 sm:text-lg">
+              Шиномонтаж, автомагазин, автоэлектрика и кузовной ремонт в Гомеле.
+              Вся основная информация видна сразу, поверх живого фона.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-6 flex flex-wrap gap-3">
               <a
                 href="tel:+375291959979"
-                className="inline-flex h-12 items-center gap-2 rounded-md bg-[#ff3b24] px-5 text-sm font-bold text-white shadow-lg shadow-black/20 transition hover:bg-[#e92f1c]"
+                className="inline-flex h-12 items-center gap-2 rounded-md bg-[#ff3b24] px-5 text-sm font-bold text-white shadow-lg shadow-black/25 transition hover:bg-[#e92f1c]"
               >
                 <Phone className="size-4" />
-                Позвонить в магазин
+                Магазин
               </a>
               <a
-                href="https://yandex.by/maps/?ll=30.964493751525882%2C52.42045537923854&z=16&pt=30.964493751525882%2C52.42045537923854"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex h-12 items-center gap-2 rounded-md bg-white px-5 text-sm font-bold text-[#172033] transition hover:bg-[#eef2f8]"
+                href="tel:+375296811670"
+                className="inline-flex h-12 items-center gap-2 rounded-md border border-white/16 bg-white/[0.11] px-5 text-sm font-bold text-white backdrop-blur-xl transition hover:bg-white/20"
               >
-                <MapPin className="size-4" />
-                Открыть карту
+                <Phone className="size-4" />
+                Шиномонтаж
               </a>
             </div>
           </div>
-        </div>
-      </section>
 
+          <div className="grid gap-3 sm:grid-cols-2">
+            <GlassPanel className="sm:col-span-2">
+              <div className="grid gap-3 sm:grid-cols-3">
+                <Highlight value="5 / 5" label="рейтинг" />
+                <Highlight value="7 дней" label="работают каждую неделю" />
+                <Highlight value="8:00 - 20:00" label="время работы" />
+              </div>
+            </GlassPanel>
 
+            <GlassPanel className="sm:col-span-2">
+              <div className="flex items-start gap-3">
+                <div className="flex size-10 shrink-0 items-center justify-center rounded-md bg-[#ff3b24]/22 text-[#ff7a68] ring-1 ring-white/18">
+                  <MapPin className="size-5" />
+                </div>
+                <div>
+                  <h2 className="text-lg font-semibold">Адрес</h2>
+                  <p className="mt-1 text-sm leading-6 text-white/72">
+                    Беларусь, Гомель, улица Барыкина 155, 246000
+                  </p>
+                  <a
+                    href="https://yandex.by/maps/?ll=30.964493751525882%2C52.42045537923854&z=16&pt=30.964493751525882%2C52.42045537923854"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-[#ff8a78]"
+                  >
+                    Открыть карту
+                    <ExternalLink className="size-3.5" />
+                  </a>
+                </div>
+              </div>
+            </GlassPanel>
 
-      <section className="relative z-10 mx-auto grid max-w-7xl gap-5 px-5 py-6 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:px-10">
-        <div className="grid gap-5 sm:grid-cols-3">
-          <StatCard value="5 / 5" label="рейтинг" />
-          <StatCard value="1" label="отзыв на AVSERVICE.BY" />
-          <StatCard value="7 дней" label="работают каждую неделю" />
-        </div>
+            <GlassPanel>
+              <h2 className="mb-3 text-lg font-semibold">Контакты</h2>
+              <div className="space-y-2">
+                {contacts.map((contact) => (
+                  <a
+                    key={contact.phone}
+                    href={contact.href}
+                    className="flex items-center justify-between gap-3 rounded-md border border-white/10 bg-white/[0.07] px-3 py-2.5 text-sm transition hover:bg-white/14"
+                  >
+                    <span>
+                      <span className="block font-semibold">{contact.phone}</span>
+                      <span className="text-xs text-white/58">{contact.label}</span>
+                    </span>
+                    <Phone className="size-4 text-[#ff7a68]" />
+                  </a>
+                ))}
+              </div>
+            </GlassPanel>
 
-        <div className="rounded-lg border border-[#dbe1ea] bg-white p-5 shadow-sm">
-          <div className="flex items-start gap-3">
-            <div className="flex size-10 shrink-0 items-center justify-center rounded-md bg-[#ff3b24]/10 text-[#ff3b24]">
-              <MapPin className="size-5" />
-            </div>
-            <div>
-              <h2 className="text-lg font-semibold">Адрес</h2>
-              <p className="mt-1 text-[#5f6d82]">Беларусь, Гомель, улица Барыкина 155, 246000</p>
-              <p className="mt-2 text-sm text-[#7a8798]">
-                Координаты: 52.42045537923854, 30.964493751525882
-              </p>
-            </div>
+            <GlassPanel>
+              <h2 className="mb-3 text-lg font-semibold">Время</h2>
+              <div className="grid grid-cols-2 gap-x-4 gap-y-1.5 text-sm">
+                {schedule.map(([day, time]) => (
+                  <div key={day} className="flex items-center justify-between gap-2">
+                    <span className="font-semibold text-white/58">{day}</span>
+                    <span className="text-white/86">{time}</span>
+                  </div>
+                ))}
+              </div>
+            </GlassPanel>
           </div>
         </div>
       </section>
 
-      <section className="relative z-10 mx-auto grid max-w-7xl gap-6 px-5 pb-10 sm:px-8 lg:grid-cols-[320px_1fr] lg:px-10">
-        <aside className="space-y-6">
-          <InfoPanel title="Контакты">
-            <div className="space-y-3">
-              {contacts.map((contact) => (
-                <a
-                  key={contact.phone}
-                  href={contact.href}
-                  className="flex items-center justify-between rounded-md border border-[#e4e9f0] p-3 transition hover:border-[#ff3b24] hover:bg-[#fff6f4]"
-                >
-                  <span>
-                    <span className="block font-semibold">{contact.phone}</span>
-                    <span className="text-sm text-[#6d7889]">{contact.label}</span>
-                  </span>
-                  <Phone className="size-4 text-[#ff3b24]" />
-                </a>
-              ))}
-            </div>
-          </InfoPanel>
-
-          <InfoPanel title="Время работы">
-            <div className="space-y-2">
-              {schedule.map(([day, time]) => (
-                <div key={day} className="flex items-center justify-between text-sm">
-                  <span className="font-semibold uppercase text-[#6d7889]">{day}</span>
-                  <span>{time}</span>
-                </div>
-              ))}
-            </div>
-          </InfoPanel>
-
-          <InfoPanel title="Ссылки">
-            <div className="space-y-2">
-              <ExternalResource href="http://diskontshina.by/" label="Веб-сайт" />
-              <ExternalResource href="https://vk.com/partner_shin" label="Вконтакте" />
-              <ExternalResource
-                href="https://www.avservice.by/autoservice/partner-shin"
-                label="Исходная карточка"
-              />
-            </div>
-          </InfoPanel>
-        </aside>
-
-        <div className="space-y-6">
-          <section className="rounded-lg border border-[#dbe1ea] bg-white p-5 shadow-sm sm:p-6">
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-              <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#ff3b24]">
-                  Направления
-                </p>
-                <h2 className="mt-2 text-3xl font-semibold">Что есть в карточке сервиса</h2>
-              </div>
-              <div className="inline-flex items-center gap-2 text-sm font-semibold text-[#5f6d82]">
-                <Clock3 className="size-4" />
-                8:00 - 20:00 ежедневно
-              </div>
-            </div>
-
-            <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              {services.map((service) => (
-                <article
-                  key={service.title}
-                  className="rounded-lg border border-[#e4e9f0] bg-[#f8fafc] p-4"
-                >
-                  <service.icon className="size-5 text-[#ff3b24]" />
-                  <h3 className="mt-4 text-lg font-semibold">{service.title}</h3>
-                  <p className="mt-2 text-sm leading-6 text-[#5f6d82]">{service.text}</p>
-                </article>
-              ))}
-            </div>
-          </section>
-
-          <section className="rounded-lg border border-[#dbe1ea] bg-white p-5 shadow-sm sm:p-6">
-            <div className="mb-5 flex items-center justify-between gap-4">
-              <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#ff3b24]">
-                  Фотографии
-                </p>
-                <h2 className="mt-2 text-3xl font-semibold">Партнер шин на месте</h2>
-                <p className="mt-2 max-w-2xl text-sm leading-6 text-[#6d7889]">
-                  Галерея объединяет фото из карточки AVSERVICE.BY и доступные
-                  фотографии из галереи Яндекс.Карт.
-                </p>
-              </div>
-              <Sparkles className="hidden size-8 text-[#ff3b24] sm:block" />
-            </div>
-            <div className="grid auto-rows-[170px] gap-3 sm:grid-cols-4 lg:grid-cols-5">
-              {gallery.map((photo, index) => (
-                <div
-                  key={photo.src}
-                  className={
-                    index < 2
-                      ? "relative overflow-hidden rounded-lg sm:col-span-2 lg:col-span-2"
-                      : "relative overflow-hidden rounded-lg"
-                  }
-                >
-                  <Image
-                    src={photo.src}
-                    alt={photo.alt}
-                    fill
-                    sizes="(min-width: 1024px) 25vw, 100vw"
-                    className="object-cover transition duration-500 hover:scale-105"
-                  />
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <section className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-            <div className="rounded-lg border border-[#dbe1ea] bg-[#172033] p-5 text-white shadow-sm sm:p-6">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/60">
-                Рейтинг
-              </p>
-              <div className="mt-4 flex items-end gap-2">
-                <span className="text-6xl font-semibold leading-none">5</span>
-                <span className="pb-2 text-2xl font-semibold text-white/55">/ 5</span>
-              </div>
-              <div className="mt-4 flex gap-1 text-[#ffcf4a]">
-                {Array.from({ length: 5 }).map((_, index) => (
-                  <Star key={index} className="size-5 fill-current" />
-                ))}
-              </div>
-              <p className="mt-4 text-sm leading-6 text-white/70">
-                Средняя оценка на основании одного опубликованного отзыва.
+      <section className="relative z-10 mx-auto max-w-7xl px-4 pb-10 sm:px-8 lg:px-10">
+        <GlassPanel className="p-4 sm:p-5">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <h2 className="text-2xl font-semibold sm:text-3xl">Направления</h2>
+              <p className="mt-2 max-w-2xl text-sm leading-6 text-white/65">
+                Основные услуги из карточки сервиса, без тяжелых белых блоков поверх фона.
               </p>
             </div>
-
-            <article className="rounded-lg border border-[#dbe1ea] bg-white p-5 shadow-sm sm:p-6">
-              <div className="flex items-start gap-4">
-                <div className="flex size-11 shrink-0 items-center justify-center rounded-md bg-[#ff3b24]/10 text-[#ff3b24]">
-                  <MessageCircle className="size-5" />
-                </div>
-                <div>
-                  <h2 className="text-xl font-semibold">Отзыв Alexander</h2>
-                  <p className="mt-1 text-sm text-[#6d7889]">на Mercedes-Benz Smart</p>
-                </div>
-              </div>
-              <p className="mt-5 leading-7 text-[#465568]">
-                Хорошее отношение. Сделали все четко, аккуратно и доступно. Все
-                показали, рассказали. Все оборудование перед клиентом. Все видно что
-                делали. Спасибо большое.
-              </p>
-              <div className="relative mt-5 h-44 overflow-hidden rounded-lg">
-                <Image
-                  src="/images/partner-shin/review-alexander.jpg"
-                  alt="Фото из отзыва Alexander"
-                  fill
-                  sizes="(min-width: 1024px) 45vw, 100vw"
-                  className="object-cover"
-                />
-              </div>
-            </article>
-          </section>
-        </div>
+            <div className="inline-flex items-center gap-2 text-sm font-semibold text-white/70">
+              <BadgeCheck className="size-4 text-[#65d37e]" />
+              Профиль AVSERVICE.BY
+            </div>
+          </div>
+          <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {services.map((service) => (
+              <article
+                key={service.title}
+                className="rounded-md border border-white/10 bg-white/[0.06] p-4 shadow-lg shadow-black/10 backdrop-blur-xl"
+              >
+                <service.icon className="size-5 text-[#ff7a68]" />
+                <h3 className="mt-4 text-lg font-semibold">{service.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-white/64">{service.text}</p>
+              </article>
+            ))}
+          </div>
+        </GlassPanel>
       </section>
     </main>
   );
 }
 
-function StatCard({ value, label }: { value: string; label: string }) {
+function GlassPanel({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   return (
-    <div className="rounded-lg border border-[#dbe1ea] bg-white p-5 shadow-sm">
-      <div className="text-3xl font-semibold">{value}</div>
-      <div className="mt-1 text-sm font-medium text-[#6d7889]">{label}</div>
-    </div>
-  );
-}
-
-function InfoPanel({
-  title,
-  children,
-}: {
-  title: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <section className="rounded-lg border border-[#dbe1ea] bg-white p-5 shadow-sm">
-      <h2 className="mb-4 text-lg font-semibold">{title}</h2>
+    <section
+      className={`rounded-md border border-white/14 bg-white/[0.09] p-4 text-white shadow-2xl shadow-black/20 backdrop-blur-2xl ${className}`}
+    >
       {children}
     </section>
   );
 }
 
-function ExternalResource({ href, label }: { href: string; label: string }) {
+function Highlight({ value, label }: { value: string; label: string }) {
   return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noreferrer"
-      className="flex items-center justify-between rounded-md border border-[#e4e9f0] px-3 py-2 text-sm font-semibold transition hover:border-[#ff3b24] hover:bg-[#fff6f4]"
-    >
-      {label}
-      <ExternalLink className="size-4 text-[#ff3b24]" />
-    </a>
+    <div className="rounded-md border border-white/10 bg-white/[0.07] p-3 backdrop-blur-xl">
+      <div className="text-2xl font-semibold leading-none text-white sm:text-3xl">{value}</div>
+      <div className="mt-1 text-xs font-medium uppercase tracking-[0.14em] text-white/50">{label}</div>
+    </div>
   );
 }
