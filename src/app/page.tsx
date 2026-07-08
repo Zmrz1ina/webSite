@@ -13,6 +13,7 @@ import {
   Star,
   Wrench,
 } from "lucide-react";
+import { ScrollWheelVideo } from "@/components/scroll-wheel-video";
 
 const contacts = [
   {
@@ -202,6 +203,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <ScrollWheelVideo />
 
       <section className="mx-auto grid max-w-7xl gap-5 px-5 py-6 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:px-10">
         <div className="grid gap-5 sm:grid-cols-3">
