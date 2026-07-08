@@ -126,19 +126,11 @@ const gallery = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#f5f7fb] text-[#172033]">
-      <section className="relative overflow-hidden bg-[#172033] text-white">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/partner-shin/service-1.jpg"
-            alt="Партнер шин на улице Барыкина 155"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover opacity-45"
-          />
-          <div className="absolute inset-0 bg-[#172033]/55" />
-        </div>
+    <main className="relative min-h-screen overflow-hidden bg-black text-[#172033]">
+      <ScrollWheelVideo />
+      <section className="relative z-10 overflow-hidden text-white">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/72 via-black/42 to-black/74" />
+
 
         <div className="relative mx-auto flex min-h-[680px] max-w-7xl flex-col justify-between px-5 py-5 sm:px-8 lg:px-10">
           <header className="flex items-center justify-between gap-4">
@@ -204,9 +196,9 @@ export default function Home() {
         </div>
       </section>
 
-      <ScrollWheelVideo />
 
-      <section className="mx-auto grid max-w-7xl gap-5 px-5 py-6 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:px-10">
+
+      <section className="relative z-10 mx-auto grid max-w-7xl gap-5 px-5 py-6 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:px-10">
         <div className="grid gap-5 sm:grid-cols-3">
           <StatCard value="5 / 5" label="рейтинг" />
           <StatCard value="1" label="отзыв на AVSERVICE.BY" />
@@ -229,7 +221,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-6 px-5 pb-10 sm:px-8 lg:grid-cols-[320px_1fr] lg:px-10">
+      <section className="relative z-10 mx-auto grid max-w-7xl gap-6 px-5 pb-10 sm:px-8 lg:grid-cols-[320px_1fr] lg:px-10">
         <aside className="space-y-6">
           <InfoPanel title="Контакты">
             <div className="space-y-3">
