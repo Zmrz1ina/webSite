@@ -80,19 +80,6 @@ export function CursorSpotlightHero() {
             <span className="font-playfair text-2xl italic text-white">Партнер шин</span>
           </div>
 
-          <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 rounded-full border border-white/30 bg-white/20 px-2 py-2 backdrop-blur-md md:flex">
-            <a className="rounded-full bg-white px-4 py-1.5 text-sm font-medium text-gray-950" href="tel:+375291959979">
-              Магазин
-            </a>
-            {services.map((service) => (
-              <span
-                key={service.title}
-                className="rounded-full px-4 py-1.5 text-sm font-medium text-white/80 transition-colors hover:bg-white/20 hover:text-white"
-              >
-                {service.title}
-              </span>
-            ))}
-          </div>
 
           <a
             href="tel:+375296811670"
@@ -105,7 +92,7 @@ export function CursorSpotlightHero() {
           </button>
         </nav>
 
-        <div className="pointer-events-none absolute left-0 right-0 top-[13%] z-50 flex flex-col items-center px-5 text-center">
+        <div className="pointer-events-none absolute left-0 right-0 top-[clamp(170px,24vh,240px)] z-50 flex flex-col items-center px-5 text-center">
           <h1 className="leading-[0.95] text-white">
             <span
               className="hero-anim hero-reveal font-playfair block text-5xl font-normal italic sm:text-7xl md:text-8xl"
@@ -138,28 +125,28 @@ export function CursorSpotlightHero() {
         </div>
 
         <div
-          className="hero-anim hero-fade absolute bottom-10 left-5 right-5 z-50 flex max-w-full flex-col items-start gap-4 sm:bottom-24 sm:left-auto sm:right-10 sm:max-w-[300px] sm:gap-5 md:right-14"
+          className="hero-anim hero-fade absolute bottom-5 left-5 right-5 z-50 flex max-w-full flex-col items-start gap-3 sm:bottom-10 sm:left-auto sm:right-10 sm:max-w-[300px] sm:gap-4 md:right-14"
           style={{ animationDelay: "0.85s" }}
         >
           <CornerPanel className="w-full">
-            <div className="mb-4 grid grid-cols-3 gap-2">
+            <div className="mb-3 grid grid-cols-3 gap-2">
               <MiniStat value="5/5" label="рейтинг" />
               <MiniStat value="7" label="дней" />
               <MiniStat value={'24"'} label="шины" />
             </div>
-            <p className="text-xs leading-relaxed text-white/80 sm:text-sm">
-              Наведите курсор на автомобиль: повреждение сменится восстановленным видом. Так мы показываем путь от проблемы к аккуратному результату.
+            <p className="text-xs leading-relaxed text-white/78 sm:text-sm">
+              Наведите курсор на автомобиль: повреждение сменится восстановленным видом.
             </p>
-            <div className="mt-5 flex flex-wrap gap-2">
+            <div className="mt-4 flex flex-wrap gap-2">
               <a
                 href="tel:+375296811670"
-                className="rounded-full bg-[#e8702a] px-7 py-3 text-sm font-medium text-white transition-all hover:scale-[1.03] hover:bg-[#d2611f] hover:shadow-lg hover:shadow-[#e8702a]/30 active:scale-95"
+                className="rounded-full bg-[#e8702a] px-6 py-3 text-sm font-medium text-white transition-all hover:scale-[1.03] hover:bg-[#d2611f] hover:shadow-lg hover:shadow-[#e8702a]/30 active:scale-95"
               >
                 Записаться
               </a>
               <Link
                 href="/dop-info"
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-5 py-3 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/20"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-3 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/20"
               >
                 Доп инфо
                 <ExternalLink className="size-4" />
@@ -185,15 +172,15 @@ export function CursorSpotlightHero() {
           </CornerPanel>
         </div>
 
-        <div className="hero-anim hero-fade absolute right-5 top-24 z-50 hidden max-w-[270px] sm:right-10 sm:top-28 md:right-14 md:block" style={{ animationDelay: "0.78s" }}>
-          <CornerPanel>
-            <div className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-white/55">
+        <div className="hero-anim hero-fade absolute left-1/2 top-[76px] z-50 hidden w-[min(560px,calc(100vw-360px))] -translate-x-1/2 md:block" style={{ animationDelay: "0.58s" }}>
+          <CornerPanel className="px-4 py-3">
+            <div className="mb-2 flex items-center justify-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-white/60">
               <BadgeCheck className="size-4 text-[#65d37e]" />
               Направления
             </div>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-4 gap-2">
               {services.map((service) => (
-                <div key={service.title} className="rounded-full border border-white/12 bg-white/10 px-3 py-2 text-xs font-medium text-white/82 backdrop-blur-md">
+                <div key={service.title} className="flex min-h-10 items-center justify-center rounded-full border border-white/12 bg-white/10 px-3 text-center text-xs font-medium leading-tight text-white/84 backdrop-blur-md">
                   {service.title}
                 </div>
               ))}
